@@ -7,7 +7,7 @@
 #include "pwm.inc"
 
 .equ PWM_COUNT_VALUE,  0x00000000
-.equ PWM_CONFIG_VALUE, 0x00003602 # Corresponds to pwmscale=15, pwmzero=1, deglitch=1, enalways=1, enoneshot=1
+.equ PWM_CONFIG_VALUE, 0x0000360F # Corresponds to pwmscale=15, pwmzero=1, deglitch=1, enalways=1, enoneshot=1
 .equ PWM_COMP_VALUE,   0x0000FFFF
 
 .equ PWM_SCALE, 0x1
@@ -29,6 +29,9 @@ setupPWM:
     li t3, PWM_CONFIG_VALUE     # load PWM Config Address Value
     sw x0, PWM_CONFIG_REG(t2)   # zero pwm config area in memory
     sw t3, PWM_CONFIG_REG(t2)   # store pwm config into memory
+
+    li t3, 0x0
+    sw t3, PWM_SCALED_COUNT_REG(t2)
 
     li t3, 0x7F                 # testing of duty cycle.
     sw t3, PWM_CMP1_REG(t2)     # storing duty cycle value into cmp register. Determine this using datasheet to see what pin corresponds to which CTRL address and register
