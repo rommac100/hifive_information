@@ -7,9 +7,7 @@
 .equ GPIO_INPUT_EN,   0x004
 .equ GPIO_INPUT_VAL,  0x000
 
-.equ LED_PIN,         0x00000800
-.equ BUT_PIN,         0x00000400 
+.equ LED_PIN,         0x00000800 # Corresponds to pin 17 on the rev b.
+.equ BUT_PIN,         0x00000400 # Correponds to pin 16 on the rev b.
 
-.equ RED_LED_PIN,     0x00400000
-
-.equ BOTH_PINS,       0x00000600
+.equ BOTH_PINS,       0x00000C00

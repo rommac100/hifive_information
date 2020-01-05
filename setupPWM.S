@@ -24,6 +24,7 @@ setupPWM:
     sw t1, GPIO_IOF_EN(t0)      # enables secondary actions for gpio
     sw t1, GPIO_IOF_SEL(t0)     # selects PWM Action
     
+    
 
     li t2, PWM_CTRL_ADDR
     li t3, PWM_CONFIG_VALUE
