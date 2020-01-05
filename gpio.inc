@@ -10,4 +10,4 @@
 .equ LED_PIN,         0x00000800 # Corresponds to pin 17 on the rev b.
 .equ BUT_PIN,         0x00000400 # Correponds to pin 16 on the rev b.
 
-.equ BOTH_PINS,       0x00000C00
+.equ BOTH_PINS,       0x00000C00 # Equals the above summed. Not entirely necessary but helpful.
